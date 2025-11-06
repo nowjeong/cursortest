@@ -133,10 +133,9 @@ const GamePlay: React.FC<GamePlayProps> = ({ difficulty, onGameOver }) => {
     
     if (matchingDrop) {
       // 정답
-      const timeSinceSpawn = Date.now() - gameStartTimeRef.current;
       const isFast = matchingDrop.y < 20; // 빨리 답한 경우
       
-      const { points, bonus } = calculateScore(stats.score, stats.combo + 1, isFast);
+      const { points, bonus } = calculateScore(stats.combo + 1, isFast);
       const totalPoints = points + bonus;
 
       setStats(prev => ({

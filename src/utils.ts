@@ -141,7 +141,6 @@ export const getEncouragementMessage = (score: number): string => {
 
 // 점수 계산
 export const calculateScore = (
-  baseScore: number,
   combo: number,
   isFastAnswer: boolean
 ): { points: number; bonus: number } => {
