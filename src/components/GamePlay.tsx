@@ -24,7 +24,6 @@ const GamePlay: React.FC<GamePlayProps> = ({ difficulty, onGameOver }) => {
   const dropIdCounter = useRef(0);
   const animationFrameRef = useRef<number>();
   const lastSpawnTimeRef = useRef<number>(Date.now());
-  const gameStartTimeRef = useRef<number>(Date.now());
 
   // 새로운 문제 생성
   const spawnDrop = () => {
